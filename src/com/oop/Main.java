@@ -10,6 +10,15 @@ class Mahasiswa {
   String major;
   double IPK;
   int age;
+
+  // constructor with parameter
+  Mahasiswa(String name, String NIM, String major, double IPK, int age) {
+    this.name = name;
+    this.NIM = NIM;
+    this.major = major;
+    this.IPK = IPK;
+    this.age = age;
+  }
 }
 
 /**
@@ -18,12 +27,7 @@ class Mahasiswa {
 public class Main {
 
   public static void main(String[] args) {
-    Mahasiswa mhs1 = new Mahasiswa();
-    mhs1.name = "Budi";
-    mhs1.NIM = "12345";
-    mhs1.major = "Informatics";
-    mhs1.IPK = 3.5;
-    mhs1.age = 20;
+    Mahasiswa mhs1 = new Mahasiswa("Budi", "12345", "Informatika", 3.5, 20);
 
     System.out.println(mhs1.name);
     System.out.println(mhs1.NIM);
