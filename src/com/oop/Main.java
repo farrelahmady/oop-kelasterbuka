@@ -62,5 +62,16 @@ public class Main {
 
     System.out.println("========================================================");
     System.out.println(mhs1.saySomething("Hello World"));
+
+    // pass by reference
+    Mahasiswa mhs2 = mhs1;
+    // If changing anything in the mhs2, it will also change the of mhs1
+
+    // Bukti
+    System.out.println("========================================================");
+    String addressMhs1 = Integer.toHexString(System.identityHashCode(mhs1));
+    System.out.println("Mhs1 Address: " + addressMhs1);
+    String addressMhs2 = Integer.toHexString(System.identityHashCode(mhs2));
+    System.out.println("Mhs2 Address: " + addressMhs2);
   }
 }
